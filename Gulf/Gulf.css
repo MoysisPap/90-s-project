@@ -1,0 +1,431 @@
+/* Global */
+
+@font-face {
+  font-family: Typewriter;
+  src: url(../fonts/JMH-Typewriter-Thin.woff2) format("woff2");
+}
+
+body {
+  font-family: "Typewriter", serif;
+  cursor: url("../images/icons8-cursor-64.png"), auto;
+  margin: 0;
+}
+
+h1 {
+  font-size: 110%;
+}
+
+h2 {
+  font-size: 180%;
+  text-decoration: underline;
+  font-family: serif;
+}
+
+/* Layout */
+
+.sticky_menu {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  text-align: center;
+  border-bottom: solid black;
+  background-color: white;
+  z-index: 99;
+}
+
+.sticky_menu_links a {
+  text-decoration: none;
+  color: black;
+}
+
+.sticky_menu_links a:hover {
+  text-decoration: underline;
+  color: red;
+  background-color: rgb(221, 221, 221);
+  cursor: url("../images/icons8-cursor-32.png"), auto;
+  transition: 0.75s;
+  font-size: 110%;
+}
+
+.sticky_menu_logo {
+  display: block;
+  max-width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+.sticky_menu_links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: bolder;
+  margin-top: 1rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.sticky_menu_marquee {
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  border-top: 1px solid black;
+  font-style: italic;
+  color: rgb(165, 0, 0);
+}
+
+@keyframes marquee {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: -100%;
+  }
+}
+
+.sticky_menu_marquee_content {
+  translate: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  animation: marquee 10s linear infinite;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 13rem;
+  padding-bottom: 2rem;
+}
+
+.main_intro {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+}
+
+.main_Map {
+  grid-column: 2/4;
+  grid-row: 1/2;
+  background-color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+}
+
+.main_Map_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_Map_img {
+  border: 1px solid black;
+  width: 100%;
+  background-image: url(https://mondediplo.com/local/cache-vignettes/L640xH411/arton2055-22e70-33c4c.jpg?1583830611);
+  height: 12rem;
+  background-size: cover;
+  background-position: center center;
+}
+
+.main_Saddam {
+  grid-column: 4/6;
+  grid-row: 1/2;
+  background-color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+}
+
+.main_Saddam_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_Saddam_img {
+  border: 1px solid black;
+  width: 100%;
+  background-image: url(https://www.byrdcenter.org/uploads/6/7/8/7/67873389/0905-saddam-1980_orig.jpg);
+  height: 12rem;
+  background-size: cover;
+  background-position: center center;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main_Invasion {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  background-color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+}
+
+.main_Invasion_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_DesertFox {
+  grid-column: 4/6;
+  grid-row: 2/3;
+  background-color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+}
+
+.main_DesertFox_info {
+  display: flex;
+  flex-direction: column;
+}
+
+footer ul {
+  width: 100%;
+  list-style-type: none;
+  margin-top: 2rem;
+  display: flex;
+  border-top: 1px solid black;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: small;
+  background-color: #e2e2e2;
+  margin-bottom: 0;
+  height: 2rem;
+  padding: 0;
+}
+
+footer a {
+  box-shadow: inset 0 0 0 0 #ff0000;
+  color: #000000;
+  padding: 0 0.25rem;
+  margin: 0 -0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+footer a:hover {
+  cursor: url("../images/icons8-cursor-32.png"), auto;
+  color: #fff;
+  box-shadow: inset 320px 0 0 0 #ff0000;
+  text-decoration: underline;
+}
+
+@media (max-width: 35rem) {
+  .sticky_menu {
+    font-size: 75%;
+    max-width: 100%;
+  }
+
+  .sticky_menu_logo {
+    max-width: 50%;
+  }
+
+  .sticky_menu_links {
+    flex-wrap: wrap;
+  }
+
+  .sticky_menu_marquee {
+    font-size: 83%;
+  }
+
+  .sticky_menu_marquee .sticky_menu_marquee_content {
+    white-space: nowrap;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 80%;
+  }
+  .main_intro {
+    grid-column: 1/1;
+    grid-row: 1/2;
+  }
+
+  .main_Map {
+    grid-column: 1/1;
+    grid-row: 2/3;
+  }
+
+  .main_Saddam {
+    grid-column: 1/1;
+    grid-row: 3/4;
+  }
+
+  .main_Invasion {
+    grid-column: 1/1;
+    grid-row: 4/5;
+  }
+
+  .main_DesertFox {
+    grid-column: 1/1;
+    grid-row: 5/6;
+  }
+
+  footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 70%;
+    height: 3rem;
+  }
+}
+
+@media (min-width: 35rem) {
+  .sticky_menu_links {
+    flex-wrap: wrap;
+  }
+
+  .sticky_menu_logo {
+    max-width: 40%;
+  }
+
+  .main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .main_intro {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  .main_Map {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .main_Saddam {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .main_Invasion {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .main_DesertFox {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 70%;
+    height: 3rem;
+  }
+}
+
+@media (min-width: 50rem) {
+  .sticky_menu_links {
+    flex-wrap: wrap;
+  }
+
+  .sticky_menu_logo {
+    max-width: 30%;
+  }
+
+  .main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .main_intro {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  .main_Map {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .main_Saddam {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .main_Invasion {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .main_DesertFox {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  footer ul {
+    flex-wrap: wrap;
+    font-size: 70%;
+    height: 3rem;
+  }
+}
+
+@media (min-width: 68rem) {
+  .sticky_menu_logo {
+    max-width: 25%;
+  }
+
+  .main {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .main_intro {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    border-right: 1px solid black;
+  }
+
+  .main_Map {
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
+
+  .main_Saddam {
+    grid-column: 4/6;
+    grid-row: 1/2;
+  }
+
+  .main_Invasion {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+
+  .main_DesertFox {
+    grid-column: 4/6;
+    grid-row: 2/3;
+  }
+
+  footer ul {
+    font-size: small;
+    height: 2rem;
+  }
+}
