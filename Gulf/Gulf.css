@@ -188,7 +188,7 @@ h2 {
   flex-direction: column;
 }
 
-.main_DesertFox {
+.main_DesertStorm {
   grid-column: 4/6;
   grid-row: 2/3;
   background-color: white;
@@ -197,7 +197,7 @@ h2 {
   text-align: left;
 }
 
-.main_DesertFox_info {
+.main_DesertStorm_info {
   display: flex;
   flex-direction: column;
 }
@@ -282,7 +282,7 @@ footer a:hover {
     grid-row: 4/5;
   }
 
-  .main_DesertFox {
+  .main_DesertStorm {
     grid-column: 1/1;
     grid-row: 5/6;
   }
@@ -329,7 +329,7 @@ footer a:hover {
     grid-row: 3/4;
   }
 
-  .main_DesertFox {
+  .main_DesertStorm {
     grid-column: 2/3;
     grid-row: 3/4;
   }
@@ -376,7 +376,7 @@ footer a:hover {
     grid-row: 3/4;
   }
 
-  .main_DesertFox {
+  .main_DesertStorm {
     grid-column: 2/3;
     grid-row: 3/4;
   }
@@ -419,7 +419,7 @@ footer a:hover {
     grid-row: 2/3;
   }
 
-  .main_DesertFox {
+  .main_DesertStorm {
     grid-column: 4/6;
     grid-row: 2/3;
   }
