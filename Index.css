@@ -427,4 +427,8 @@ footer a:hover {
     font-size: small;
     height: 2rem;
   }
+
+  .sticky_menu_links .active {
+    color: red;
+  }
 }
